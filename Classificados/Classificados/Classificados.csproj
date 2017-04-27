@@ -49,6 +49,7 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -203,6 +204,30 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relatorios\dsAnunciante.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAnunciante.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\dsAnuncio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAnuncio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\frmAnunciante.aspx.cs">
+      <DependentUpon>frmAnunciante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\frmAnunciante.aspx.designer.cs">
+      <DependentUpon>frmAnunciante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Relatorios\frmAnuncio.aspx.cs">
+      <DependentUpon>frmAnuncio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Relatorios\frmAnuncio.aspx.designer.cs">
+      <DependentUpon>frmAnuncio.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -212,10 +237,34 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Relatorios\frmAnunciante.aspx" />
+    <Content Include="Relatorios\frmAnuncio.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Relatorios\dsAnuncio.xsc">
+      <DependentUpon>dsAnuncio.xsd</DependentUpon>
+    </Content>
+    <Content Include="Relatorios\dsAnunciante.xsc">
+      <DependentUpon>dsAnunciante.xsd</DependentUpon>
+    </Content>
+    <None Include="Relatorios\dsAnunciante.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAnunciante.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Relatorios\dsAnunciante.xss">
+      <DependentUpon>dsAnunciante.xsd</DependentUpon>
+    </Content>
+    <None Include="Relatorios\dsAnuncio.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAnuncio.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Relatorios\dsAnuncio.xss">
+      <DependentUpon>dsAnuncio.xsd</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -290,6 +339,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Relatorios\rptAnunciante.rdlc" />
+    <EmbeddedResource Include="Relatorios\rptAnuncios.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

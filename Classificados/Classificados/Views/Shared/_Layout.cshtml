@@ -26,7 +26,13 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Anuncio", "Index", "Anuncios")</li>
                     <li>@Html.ActionLink("Anunciante", "Index", "Anunciantes")</li>
-                </ul>
+                   
+                    <li id="Relatorio" Name="Relatórios">
+                        <a href="~/Relatorios/frmAnuncio.aspx">Relatorio Anúncios</a>
+                        <a href="~/Relatorios/frmAnunciante.aspx">Relatorio Anúnciante</a>
+                    </li>
+                    </ul>
+                
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
